@@ -25,5 +25,5 @@ jobs:
           pip install ".[dev]"
       - name: Linting and formatting checks
         run: |
-          black check .
+          black --check .
           ruff check .
