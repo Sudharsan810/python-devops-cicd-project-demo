@@ -10,4 +10,6 @@ Requires-Dist: click<9.0,>=8.0
 Provides-Extra: dev
 Requires-Dist: ruff; extra == "dev"
 Requires-Dist: black; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: bandit; extra == "dev"
 Dynamic: license-file

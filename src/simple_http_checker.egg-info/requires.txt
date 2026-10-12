@@ -4,3 +4,5 @@ click<9.0,>=8.0
 [dev]
 ruff
 black
+mypy
+bandit
