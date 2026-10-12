@@ -1,8 +1,10 @@
-import requests
 import logging
-from typing import Collection
+from collections.abc import Collection
+
+import requests
 
 logger = logging.getLogger(__name__)
+
 
 def check_urls(urls: Collection[str], timeout: int = 5) -> dict[str, str]:
     """
@@ -15,7 +17,9 @@ def check_urls(urls: Collection[str], timeout: int = 5) -> dict[str, str]:
     Returns:
         dict[str, str]: A dictionary mapping each URL to its status ("OK" or "FAILED").
     """
-    logger.info(f"Started checking {len(urls)} URLs with the timeout of {timeout} seconds.")
+    logger.info(
+        f"Started checking {len(urls)} URLs with the timeout of {timeout} seconds."
+    )
     results = {}
 
     for url in urls:
@@ -37,7 +41,7 @@ def check_urls(urls: Collection[str], timeout: int = 5) -> dict[str, str]:
             logger.warning("Connection Error")
         except requests.exceptions.RequestException as e:
             status = f"REQUEST_ERROR: {type(e).__name__}"
-            logger.error(f"An uunexpected error occured: {e}", exc_info=True)
+            logger.exception("An unexpected error occured")
 
         results[url] = status
         logger.debug(f"Completed checking: {url:<40} -> {status}")
