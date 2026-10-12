@@ -1,0 +1,21 @@
+name: CI/CD for simple_http_checker
+
+on:
+  push:
+    branches: ['main']
+  workflow_dispatch:
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@4
+      - name: set up python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: display python version
+        run:
+          python --version
+          which python

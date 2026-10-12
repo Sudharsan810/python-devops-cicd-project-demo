@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+simple_http_checker.egg-info/PKG-INFO
+simple_http_checker.egg-info/SOURCES.txt
+simple_http_checker.egg-info/dependency_links.txt
+simple_http_checker.egg-info/requires.txt
+simple_http_checker.egg-info/top_level.txt
