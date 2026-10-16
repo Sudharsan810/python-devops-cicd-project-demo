@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.4.0 (2026-10-16)
+
+### Features
+
+- **publish-cicd**: Prod stage
+  ([`e637513`](https://github.com/Sudharsan810/python-devops-cicd-project-demo/commit/e6375136f9e36630e3cbe72e4e5e0c03da257305))
+
+
 ## v1.3.2 (2026-10-16)
 
 ### Bug Fixes
