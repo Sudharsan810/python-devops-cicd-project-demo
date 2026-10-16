@@ -12,4 +12,6 @@ Requires-Dist: ruff; extra == "dev"
 Requires-Dist: black; extra == "dev"
 Requires-Dist: mypy; extra == "dev"
 Requires-Dist: bandit; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-mock; extra == "dev"
 Dynamic: license-file

@@ -6,3 +6,5 @@ ruff
 black
 mypy
 bandit
+pytest
+pytest-mock

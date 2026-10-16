@@ -1,4 +1,5 @@
 import logging
+from collections.abc import Collection
 
 import click
 
@@ -17,7 +18,7 @@ logger = logging.getLogger(__name__)
 @click.argument("urls", nargs=-1)
 @click.option("--timeout", default=5, help="timeout in sec for each request")
 @click.option("--verbose", "-v", is_flag=True, help="enable debug logging")
-def main(urls, timeout, verbose):
+def main(urls: Collection, timeout: int, verbose: bool):
     if verbose:
         logging.getLogger().setLevel(logging.DEBUG)
         logger.debug("logging level set to Debug")
@@ -31,7 +32,7 @@ def main(urls, timeout, verbose):
     logger.info(f"timeout: {timeout}")
     logger.info(f"verbose: {verbose}")
 
-    results = check_urls(urls)
+    results = check_urls(urls, timeout)
 
     click.echo("\n-------Results---------\n")
 
