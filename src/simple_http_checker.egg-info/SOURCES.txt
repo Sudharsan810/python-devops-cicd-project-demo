@@ -10,3 +10,5 @@ src/simple_http_checker.egg-info/dependency_links.txt
 src/simple_http_checker.egg-info/entry_points.txt
 src/simple_http_checker.egg-info/requires.txt
 src/simple_http_checker.egg-info/top_level.txt
+tests/test_checker.py
+tests/test_cli.py
